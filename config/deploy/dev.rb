@@ -11,7 +11,7 @@ set :stage, :dev
 set :branch, "dev"
 set :deploy_user, "deploy"
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
-set :server_name, "http://128.199.231.255/"
+set :server_name, ""
 set :server_ip, ENV['DEV_ADDRESS']
 
 set :server_wp_db_name, ENV['DEV_WP_MYSQL_DB_NAME']
@@ -27,7 +27,7 @@ set :server_port , ENV['DEV_PORT']
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server '128.199.231.255', user: 'deployer', roles: %w{web app db}, port: 22
+server '', user: 'deployer', roles: %w{web app db}, port: 22
 
 set :deploy_to, "/var/www/html/#{fetch(:full_app_name)}"
 
