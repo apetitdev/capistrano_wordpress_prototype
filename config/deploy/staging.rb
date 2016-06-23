@@ -9,7 +9,7 @@ Dotenv.load
 
 set :stage, :staging
 set :branch, "staging"
-set :deploy_user, "deployer"
+set :deploy_user, ""
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 set :server_name, "staging.eiceducation.com"
 set :server_ip, ENV['STAGING_ADDRESS']
@@ -28,7 +28,7 @@ set :server_port , ENV['STAGING_PORT']
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server '153.92.46.193', user: 'deployer', roles: %w{web app db}, port: 22
+server '', user: 'deployer', roles: %w{web app db}, port: 22
 
 set :deploy_to, "/var/www/html/#{fetch(:full_app_name)}"
 
