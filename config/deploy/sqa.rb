@@ -28,7 +28,7 @@ set :server_port , ENV['SQA_PORT']
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server '119.9.72.227', user: 'deployer', roles: %w{web app db}, port: 22
+server '', user: 'deployer', roles: %w{web app db}, port: 22
 
 set :deploy_to, "/var/www/html/#{fetch(:full_app_name)}"
 
