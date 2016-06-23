@@ -7,8 +7,8 @@ Dotenv.load
 
 lock '3.4.0'
 
-set :application, 'investor_relations'
-set :repo_url, 'git@github.com:Prepsmith/investor_relations.git'
+set :application, ''
+set :repo_url, ''
 # set :default_env, { path: "/usr/local/bin:$PATH" }
 
 # Default branch is :master
